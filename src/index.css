@@ -85,7 +85,7 @@ form .button {
   padding: 1rem;
 }
 .line {
-  text-decoration: line-through;
+  text-decoration: 3px line-through solid red;
   font-weight: 700;
 }
 .input input.todo {

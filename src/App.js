@@ -60,6 +60,10 @@ function Button({ children }) {
 function FormInput({ inputTodo, setInputTodo, addTodo }) {
   function handleSubmit(e) {
     e.preventDefault();
+    if (!inputTodo) {
+      alert("masukan input todolist anda");
+      return;
+    }
     const id = new Date();
     const neTodo = {
       id,
@@ -102,6 +106,7 @@ function Item({ todoItem, onDelete, onDone }) {
         value={todoItem.todo}
         className={todoItem.condition ? `todo line` : `todo`}
         type="text"
+        disabled
       />
       <button className="button" onClick={() => onDelete(todoItem.id)}>
         Delete
